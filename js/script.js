@@ -76,5 +76,7 @@ function() {
 		}, function() {
 			a.hide()
 		})
+
+		$('.header').topbar();
 	})
 }($);
