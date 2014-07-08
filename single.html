@@ -10,7 +10,11 @@
 	<meta name="generator" content="笔戈科技 0.1">
 	<link rel="stylesheet" href="css/pure.css">
 	<link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/post.css"></head>
+	<link rel="stylesheet" href="css/post.css">
+	<style>
+		.header{position:fixed;top:0;right:0;left:0;z-index:999999;background:#fff;border-bottom:1px solid #f3f3f3;}
+	</style>
+</head>
 <body>
 	<div class="header">
 		<a href="/list" class="menu">
@@ -178,8 +182,10 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.lazyload.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/jquery.topbar.js"></script>
 
 	<script>
+		$('.header').topbar();
         if($("img.lazy"))
             $("img.lazy").lazyload({effect : "fadeIn"});
     </script>
