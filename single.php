@@ -26,9 +26,14 @@
 				</div>
 
 				<div id="content" class="post-content" style="max-width: 632px;*width: 632px \9;">
-					<?php the_content(); ?>
+					<div>
+						<?php the_content(); ?>
+					</div>
+					<div class="post-meta"><time datetime="2014-07-02">Jul 02 2014 08:59:27 </time> 
+						<?php getThemeShare(); ?>
+                    </div>
 				</div>
-
+				
 				<div id="more-post">
 					<div class="title">
 						<h2>更多阅读</h2>
