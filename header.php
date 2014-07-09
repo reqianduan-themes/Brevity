@@ -19,7 +19,8 @@ Date: 2014-04-26
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/base.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/screen.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/post.css">
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bdshare.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bdshare.custom.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/duoshuo.custom.css">
 </head>
 <body>
 	<div class="header">

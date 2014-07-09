@@ -33,10 +33,15 @@
 					<div class="post">
 						<?php the_content(); ?>
 					</div>
+					
 					<div class="post-meta">
 						<time datetime="2014-07-02">Jul 02 2014 08:59:27 </time> 
 						<?php getThemeShare(); ?>
                     </div>
+
+					<div id="respond" clas="post-comment">
+						<?php comments_template(); ?>
+					</div>
 				</div>
 				
 				<div id="more-post">
