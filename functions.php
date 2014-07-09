@@ -2,10 +2,10 @@
 
 $dname = 'X-Simple';
 
-//自定义小工具
-include('widget/widget.php');
-//自定义主题设置
-include('option/dtheme.php');
+// //自定义小工具
+// include('widget/widget.php');
+// //自定义主题设置
+// include('option/dtheme.php');
 
 //去除头部冗余代码
 remove_action( 'wp_head',   'feed_links_extra', 3 ); 
