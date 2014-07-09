@@ -1,7 +1,7 @@
 /*baidu share*/
 #bdshare{padding-top:30px;padding-bottom:30px;border-bottom:1px solid #e6eaed;}
 #bdshare .bds_more{display:none;}
-#bdshare a{display:inline-block;width:110px;height:32px;line-height:30px;margin:0 5px;padding:0;background-image:none;font-size:16px;border-width:1px;border-style:solid;border-radius:50px;text-indent:0;text-align:center;text-decoration:none;transition:all 0.25s ease;}
+#bdshare a{display:inline-block;width:110px;height:32px;line-height:30px;margin:5px;padding:0;background-image:none;font-size:16px;border-width:1px;border-style:solid;border-radius:50px;text-indent:0;text-align:center;text-decoration:none;transition:all 0.25s ease;}
 #bdshare a:hover,
 #bdshare a:focus,
 #bdshare a:active{color:white;outline:0;opacity:1;filter:alpha(opacity=100);}
