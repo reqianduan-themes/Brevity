@@ -1,0 +1,17 @@
+/*baidu share*/
+#bdshare{padding-top:30px;padding-bottom:30px;border-bottom:1px solid #e6eaed;}
+#bdshare .bds_more{display:none;}
+#bdshare a{display:inline-block;width:110px;height:32px;line-height:30px;margin:0 5px;padding:0;background-image:none;font-size:16px;border-width:1px;border-style:solid;border-radius:50px;text-indent:0;text-align:center;text-decoration:none;transition:all 0.25s ease;}
+#bdshare a:hover,
+#bdshare a:focus,
+#bdshare a:active{color:white;outline:0;opacity:1;filter:alpha(opacity=100);}
+#bdshare .bds_count{color:#333;border-color:#333;}
+#bdshare .bds_tsina{color:#d44137;border-color:#d44137;}
+#bdshare .bds_weixin{color:#38ad5a;border-color:#38ad5a;}
+#bdshare .bds_sqq{color:#39B2E2;border-color:#39B2E2;}
+#bdshare .bds_renren{color:#105BA3;border-color:#105BA3;}
+#bdshare .bds_count:hover{background:#333;}
+#bdshare .bds_tsina:hover{background:#d44137;}
+#bdshare .bds_weixin:hover{background:#38ad5a;}
+#bdshare .bds_sqq:hover{background:#39B2E2;}
+#bdshare .bds_renren:hover{background:#105BA3;}

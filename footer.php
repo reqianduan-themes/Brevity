@@ -54,7 +54,7 @@
 	<?php 
 		global $HasShare; 
 		if($HasShare == true){ 
-			echo '<script>window._bd_share_config={"common":{"bdSnsKey":{'.getThemeOption('d_bdshare').'},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":""},"share":{}};with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion="+~(-new Date()/36e5)];</script>';
+			echo '<script>window._bd_share_config={"common":{},"share":{}};with(document)0[(getElementsByTagName("head")[0]||body).appendChild(createElement("script")).src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion="+~(-new Date()/36e5)];</script>';
 		} 
 		if( getThemeOption('d_footcode_b') != '' ) echo getThemeOption('d_footcode'); 
 	?>

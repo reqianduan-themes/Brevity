@@ -19,6 +19,7 @@ Date: 2014-04-26
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/base.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/screen.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/post.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bdshare.css">
 </head>
 <body>
 	<div class="header">
