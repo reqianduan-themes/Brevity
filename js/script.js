@@ -77,6 +77,11 @@ function() {
 			a.hide()
 		})
 
+		//开启topbar滚动隐藏效果
 		$('.header').topbar();
+
+		//开启图片lazyload效果
+		if($("img.lazy"))
+            $("img.lazy").lazyload({effect : "fadeIn"});
 	})
 }($);
