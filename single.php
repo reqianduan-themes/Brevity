@@ -1,9 +1,13 @@
 <?php get_header(); ?>
 
 	<div role="main">
+
+
 		<?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
-			<article>
+			<article class="post">
 				<div id="main">
+
+				
 					<div class="banner" style="height: 634.3333333333334px; background-image: url(img/main.jpg); background-attachment: fixed; background-size: 100% 683px;">
 						<div class="banner_bg" style="height: 634.3333333333334px;">
 							<div class="banner-head">
@@ -25,11 +29,12 @@
 					</div>
 				</div>
 
-				<div id="content" class="post-content" style="max-width: 632px;*width: 632px \9;">
-					<div>
+				<div id="content" class="post-content">
+					<div class="post">
 						<?php the_content(); ?>
 					</div>
-					<div class="post-meta"><time datetime="2014-07-02">Jul 02 2014 08:59:27 </time> 
+					<div class="post-meta">
+						<time datetime="2014-07-02">Jul 02 2014 08:59:27 </time> 
 						<?php getThemeShare(); ?>
                     </div>
 				</div>

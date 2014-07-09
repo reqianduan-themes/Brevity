@@ -11,14 +11,14 @@
 	<div class="content" role="main">
 		<?php if (have_posts()) : ?>
 			<?php while (have_posts()) : the_post(); ?>
-				<article class="post">
-					<header class="post-header">
-						<span class="post-meta">
+				<article class="entry">
+					<header class="entry-header">
+						<span class="entry-meta">
 							<time>
 								<?php the_time('Y/m/d H:i'); ?>
 							</time>
 						</span>
-						<h2 class="post-title">
+						<h2 class="entry-title">
 							<a href="<?php the_permalink(); ?>
 								">
 								<?php the_title(); ?>
@@ -26,12 +26,12 @@
 						</h2>
 					</header>
 
-					<section class="post-excerpt">
+					<section class="entry-excerpt">
 						<a href="<?php the_permalink(); ?>
 							">
 							<?php vb_the_thumbnail(); ?></a>
 						<p>
-							<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 120, '...'); ?></p>
+							<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200, '...'); ?></p>
 					</section>
 				</article>
 			<?php endwhile; ?>
