@@ -1,0 +1,68 @@
+<div id="more-post">
+	<div class="title">
+		<h2>更多阅读</h2>
+		<h3>FURTHER READING</h3>
+	</div>
+	<div class="posts" id="posts">
+		<div class="reco">
+			<?php  
+			$exclude_id = $post->ID; 
+			$posttags = get_the_tags(); 
+			$i = 0;
+			$limit = 5 ;
+			if ( $posttags ) { 
+				$tags = ''; foreach ( $posttags as $tag ) $tags .= $tag->name . ',';
+				$args = array(
+					'post_status' => 'publish',
+					'tag_slug__in' => explode(',', $tags), 
+					'post__not_in' => explode(',', $exclude_id), 
+					'caller_get_posts' => 1, 
+					'orderby' => 'comment_date', 
+					'posts_per_page' => $limit
+				);
+				query_posts($args); 
+				while( have_posts() ) { the_post();
+					$author_id = get_the_author_meta('ID');
+					echo '<a href="'.get_permalink().'">';
+					echo	'<div class="l-box">';
+					echo		'<div class="post-bg" style="background-image:url('.getThumbnailUrl().');"></div>';
+					echo		'<div class="post-author-img" style="background-image:url('.getAvatarUrl($author_id).');"></div>';
+					echo		'<h2>'.get_the_title().'</h2>';
+					echo		'<h4>'.get_the_author_meta("display_name").'</h4>';
+					echo	'</div>';
+					echo '</a>';					
+					$exclude_id .= ',' . $post->ID; $i ++;
+				};
+				wp_reset_query();
+			}
+			if ( $i < $limit ) { 
+				$cats = ''; foreach ( get_the_category() as $cat ) $cats .= $cat->cat_ID . ',';
+				$args = array(
+					'category__in' => explode(',', $cats), 
+					'post__not_in' => explode(',', $exclude_id),
+					'caller_get_posts' => 1,
+					'orderby' => 'comment_date',
+					'posts_per_page' => $limit - $i
+				);
+				query_posts($args);
+				while( have_posts() ) { the_post();
+					$author_id = get_the_author_meta('ID');
+					echo '<a href="'.get_permalink().'">';
+					echo	'<div class="l-box">';
+					echo		'<div class="post-bg" style="background-image:url('.getThumbnailUrl().');"></div>';
+					echo		'<div class="post-author-img" style="background-image:url('.getAvatarUrl($author_id).');"></div>';
+					echo		'<h2>'.get_the_title().'</h2>';
+					echo		'<h4>'.get_the_author_meta("display_name").'</h4>';
+					echo	'</div>';
+					echo '</a>';	
+					$i ++;
+				};
+				wp_reset_query();
+			}
+			if ( $i  == 0 ){
+				echo '<li>暂无相关文章！</li>';
+			}
+			?>
+		</div>
+	</div>
+</div>
