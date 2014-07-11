@@ -9,7 +9,7 @@ module.exports = function(grunt){
 	            ' * Author: <%= pkg.author %>\n' + 
 	            ' * Author URI: <%= pkg.authorURI %>\n' + 
 	            ' * Version: <%= pkg.version %>\n' +
-	            ' * © <%= grunt.template.today("yyyy") %> xiguabaobao.com • All rights reserved.\n' +
+	            ' * © <%= grunt.template.today("yyyy") %> xiguabaobao.com. All rights reserved.\n' +
 	            ' */\n',
 	    uglify: {
 	    	options: {

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div  class="site-head" style="background-image:url(img/main.jpg) ">
+	<div  class="site-head" style="background-image:url(<?php echo getThemeOption('d_head_bg'); ?>) ">
 		<div class="vertical">
 			<div class="site-head-content inner">
 				<img src="http://bigertech.res.meizu.com/blog/static/images/bglogo.png?v=1b4e131151">
@@ -29,7 +29,7 @@
 					<section class="entry-excerpt">
 						<a href="<?php the_permalink(); ?>
 							">
-							<?php vb_the_thumbnail(); ?></a>
+							<?php getThumbnail(); ?></a>
 						<p>
 							<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200, '...'); ?></p>
 					</section>
@@ -37,7 +37,7 @@
 			<?php endwhile; ?>
 
 			<div class="pagination" role="navigation">
-		    	<?php vb_page_nav(9); ?>
+		    	<?php getPagination(9); ?>
 		    </div>
 	    <?php else : ?>
     		<h2>Not Found</h2>

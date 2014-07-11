@@ -9,8 +9,7 @@ Date: 2014-04-26
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title><?php wp_title('-', true, 'right'); bloginfo('name'); ?></title>
+	<title><?php wp_title('-', true, 'right'); echo get_option('blogname'); if (is_home ()) echo "-", get_option('blogdescription'); if ($paged > 1) echo '-Page ', $paged; ?></title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,13 +20,14 @@ Date: 2014-04-26
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/post.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bdshare.custom.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/duoshuo.custom.css">
+	<?php if( getThemeOption('d_headcode_b') != '' ) echo getThemeOption('d_headcode'); ?>
 </head>
 <body>
 	<div class="header">
 		<a href="/list" class="menu">
 			<div class="menu_ico"></div>
 		</a>
-		<a href="http://www.bigertech.com" class="logo">
+		<a href="<?php bloginfo('url'); ?>" class="logo">
 			<div></div>
 		</a>
 		<a href="/list" class="seach">
