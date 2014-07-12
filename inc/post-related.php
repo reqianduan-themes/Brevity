@@ -9,7 +9,7 @@
 			$exclude_id = $post->ID; 
 			$posttags = get_the_tags(); 
 			$i = 0;
-			$limit = 5 ;
+			$limit = 3 ;
 			if ( $posttags ) { 
 				$tags = ''; foreach ( $posttags as $tag ) $tags .= $tag->name . ',';
 				$args = array(

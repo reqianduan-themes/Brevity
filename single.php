@@ -16,8 +16,8 @@
 				<div class="author_info">
 					<div id="author">
 						<?php $author_id = get_the_author_meta('ID'); ?>
-						<a href="<?php echo get_author_posts_url($author_id); ?>" target="_blank">
-							<div class="pic" style="background-image:url(<?php echo getAvatarUrl($author_id); ?>);"></div>
+						<a href="<?php echo get_author_posts_url($author_id); ?>" target="_blank" class="pic">
+							<img src="<?php echo getAvatarUrl($author_id); ?>" style="width:100%;height:100%;border-radius:50%;">
 						</a>
 						<a href="<?php echo get_author_posts_url($author_id); ?>" title="查看作者">
 							<h3><?php the_author_meta('display_name'); ?></h3>
