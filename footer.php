@@ -26,7 +26,7 @@
 				<div class="bg"></div>
 			</a>
 			<section class="copyright">&copy; 2014 <?php bloginfo('name'); ?>. All Rights Reserved.</section>
-			<p class="approve"><?php echo getThemeOption('d_beian'); ?></p>
+			<p class="approve"><?php  echo (getThemeOption('d_beian') == '' ? 'Theme by B1' : getThemeOption('d_beian')); ?></p>
 		</div>
 	</div>
 
