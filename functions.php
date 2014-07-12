@@ -1,6 +1,6 @@
 <?php
 
-$dname = 'B1';
+$dname = 'B1-Simple';
 
 
 //自定义主题设置
@@ -161,10 +161,10 @@ function getPagination($range = 9){
 //获取头像($param为用户email或者用户id)
 function getAvatarUrl($param){ 
     $p = get_bloginfo('template_directory').'/img/avatar.jpg';
-    if($param == '') {
+    if($param=='') {
         return $p;
     } else {
-        preg_match("/src='(.*?)'/i", get_avatar( $param, '150'), $matches);
+        preg_match("/src='(.*?)'/i", get_avatar( $param,'150',$p ), $matches);
         return $matches[1];
     }
 }
