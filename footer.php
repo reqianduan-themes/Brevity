@@ -8,7 +8,7 @@
 			<a href="javascript:void(0);" target="_blank" title="微信">
 				<div class="icon">
 					<div class="weixin bg_logo"></div>
-					<img class="qrcode" alt="" src="<?php echo getThemeOption('d_weixin'); ?>" style="left: 822.5px; top: 4482.53125px; display: none;"></div>
+					<img class="qrcode" alt="" src="<?php echo getThemeOption('d_weixin'); ?>" style="width:260px;height:260px;left: 822.5px; top: 4482.53125px; display: none;"></div>
 			</a>
 			<a href="#" target="_blank" title="笔戈视频">
 				<div class="icon">
