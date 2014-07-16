@@ -47,9 +47,9 @@
 	<div id="sub-site">
 		<div class="page page-game">
 			<div class="text">
-				<h6>Big Ads</h6>
+				<h6>WordPress</h6>
 				<a href="#" target="_blank">
-					<h3>尊享广告位</h3>
+					<h3>主题定制</h3>
 				</a>
 				<a href="#" target="_blank">
 					<div class="btn_view"></div>
