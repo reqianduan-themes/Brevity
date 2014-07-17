@@ -3,7 +3,8 @@
 	<div  class="site-head" style="background-image:url(<?php echo getThemeOption('d_head_bg'); ?>) ">
 		<div class="vertical">
 			<div class="site-head-content inner">
-				<img src="http://bigertech.res.meizu.com/blog/static/images/bglogo.png?v=1b4e131151">
+				<h1><?php echo get_option('blogname'); ?></h1>
+				<h3><?php echo get_option('blogdescription'); ?></h3>
 			</div>
 		</div>
 	</div>
