@@ -19,19 +19,15 @@
 							</time>
 						</span>
 						<h2 class="entry-title">
-							<a href="<?php the_permalink(); ?>
-								">
-								<?php the_title(); ?>
-							</a>
+							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						</h2>
 					</header>
 
 					<section class="entry-excerpt">
-						<a href="<?php the_permalink(); ?>
-							">
-							<?php getThumbnail(); ?></a>
+						<a href="<?php the_permalink(); ?>"><?php getThumbnail(); ?></a>
 						<p>
-							<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200, '...'); ?></p>
+							<?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200, '...'); ?>
+						</p>
 					</section>
 				</article>
 			<?php endwhile; ?>
