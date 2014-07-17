@@ -9,7 +9,7 @@ module.exports = function(grunt){
 	            ' * Author: <%= pkg.author %>\n' + 
 	            ' * Author URI: <%= pkg.authorURI %>\n' + 
 	            ' * Version: <%= pkg.version %>\n' +
-	            ' * © <%= grunt.template.today("yyyy") %> xiguabaobao.com. All rights reserved.\n' +
+	            ' * © <%= grunt.template.today("yyyy") %> themes.xiguabaobao.com. All rights reserved.\n' +
 	            ' */\n',
 	    uglify: {
 	    	options: {
@@ -33,7 +33,7 @@ module.exports = function(grunt){
 	    	},
 	    	build: {
 	    		files: {
-	    			'style.css': [
+	    			'css/all.min.css': [
 	    				'css/pure.css',
 	    				'css/base.css',
 	    				'css/screen.css',
@@ -42,10 +42,20 @@ module.exports = function(grunt){
 	    		}
 	    	}
 	    },
+	    csscomb: {
+			options: {
+				config: 'css/.csscomb.json'
+			},
+			build: {
+				files: {
+					'css/style.css': 'css/style.css'
+				}
+			}
+		},
 	    watch: {
 	    	css: {
 	    		files: ['css/*.css'],
-	    		tasks: ['cssmin']
+	    		tasks: ['csscomb','cssmin']
 	    	},
 	    	js: {
 	    		files: ['js/*.js'],
@@ -58,7 +68,8 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-csscomb');
 
 	//指定任务
-	grunt.registerTask('default', ['uglify', 'cssmin']);
+	grunt.registerTask('default', ['uglify', 'csscomb', 'cssmin']);
 };
