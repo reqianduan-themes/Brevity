@@ -20,6 +20,7 @@ Date: 2014-07-12
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/post.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bdshare.custom.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/duoshuo.custom.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/typography.css">
 	<?php if( getThemeOption('d_headcode_b') != '' ) echo getThemeOption('d_headcode'); ?>
 </head>
 <body>
