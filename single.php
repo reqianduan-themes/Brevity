@@ -20,8 +20,9 @@
 							<img src="<?php echo getAvatarUrl($author_id); ?>" style="width:100%;height:100%;border-radius:50%;">
 						</a>
 						<a href="<?php echo get_author_posts_url($author_id); ?>" title="查看作者">
-							<h3><?php the_author_meta('display_name'); ?></h3>
+							<h4><?php the_author_meta('display_name'); ?></h4>
 						</a>
+						<time><?php the_time('Y/m/d H:i'); ?></time> 
 					</div>
 				</div>
 
@@ -31,7 +32,6 @@
 					</div>
 					
 					<div class="post-meta">
-						<time datetime="2014-07-02"><?php the_time('Y/m/d H:i'); ?></time> 
 						<?php the_tags('',' ',''); ?>
                     </div>
 					
