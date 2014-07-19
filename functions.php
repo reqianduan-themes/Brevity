@@ -67,63 +67,6 @@ function redirect_admin() {
 add_action( 'admin_init', 'redirect_admin', 1 );
 
 
-/**
- * 自动为文章内的标签添加链接
- */
-$match_num_from = 1;//一个标签出现少于多少次不添加链接
-$match_num_to = 1;//同一个标签添加几次链接
-//按长度排序
-function tag_sort($a, $b){
-    if ( $a->name == $b->name ) return 0;
-    return ( strlen($a->name) > strlen($b->name) ) ? -1 : 1;
-}
-//为符合条件的标签添加链接
-function tag_link($content){
-    global $match_num_from,$match_num_to;
-    $posttags = get_the_tags();
-    if ($posttags) {
-        usort($posttags, "tag_sort");
-        foreach($posttags as $tag) {
-            $link = get_tag_link($tag->term_id);
-            $keyword = $tag->name;
-            //链接的代码
-            $cleankeyword = stripslashes($keyword);
-            $url = "<a href=\"$link\" title=\"".str_replace('%s',addcslashes($cleankeyword, '$'),__('View all posts in %s'))."\"";
-            $url .= ' target="_blank"';
-            $url .= ">".addcslashes($cleankeyword, '$')."</a>";
-            $limit = rand($match_num_from,$match_num_to);
-            //不链接的代码
-            $content = preg_replace( '|(<a[^>]+>)(.*)('.$ex_word.')(.*)(</a[^>]*>)|U'.$case, '$1$2%&&&&&%$4$5', $content);
-            $content = preg_replace( '|(<img)(.*?)('.$ex_word.')(.*?)(>)|U'.$case, '$1$2%&&&&&%$4$5', $content);
-            $cleankeyword = preg_quote($cleankeyword,'\'');
-            $regEx = '\'(?!((<.*?)|(<a.*?)))('. $cleankeyword . ')(?!(([^<>]*?)>)|([^>]*?</a>))\'s' . $case;
-            $content = preg_replace($regEx,$url,$content,$limit);
-            $content = str_replace( '%&&&&&%', stripslashes($ex_word), $content);
-        }
-    }
-    return $content;
-}
-add_filter('the_content','tag_link',1);
-
-
-/**
- * 自动为文章添加已使用过的标签（注意：会导致无法手动删除标签）
- */
-function auto_add_tags(){
-    $tags = get_tags( array('hide_empty' => false) );
-    $post_id = get_the_ID();
-    $post_content = get_post($post_id)->post_content;
-    if ($tags) {
-        foreach ( $tags as $tag ) {
-            // 如果文章内容出现了已使用过的标签，自动添加这些标签
-            if ( strpos($post_content, $tag->name) !== false)
-                wp_set_post_tags( $post_id, $tag->name, true );
-        }
-    }
-}
-add_action('save_post', 'auto_add_tags');
-
-
 //移除googlefont，因为天朝的屏蔽导致进入后台巨慢
 function remove_open_sans() {
     wp_deregister_style( 'open-sans' );
@@ -131,6 +74,12 @@ function remove_open_sans() {
     wp_enqueue_style('open-sans','');
 }
 add_action('init','remove_open_sans');
+
+
+//获取主题设置
+function getThemeOption($e){
+    return stripslashes(get_option($e));
+}
 
 
 /**
@@ -158,7 +107,10 @@ function getPagination($range = 9){
 }
 
 
-//获取头像($param为用户email或者用户id)
+/**
+ * 获取作者头像url
+ * @param  $param 作者的email或者id
+ */
 function getAvatarUrl($param){ 
     $p = get_bloginfo('template_directory').'/img/avatar.jpg';
     if($param == '') {
@@ -208,12 +160,6 @@ function getThumbnailUrl(){
             //echo '<img class="lazy pure-img" src="'.get_bloginfo('template_url').'/img/default.jpg" alt="'.trim(strip_tags( $post->post_title )).'" />';  
         }  
     }
-}
-
-
-//获取主题设置
-function getThemeOption($e){
-    return stripslashes(get_option($e));
 }
 
 
