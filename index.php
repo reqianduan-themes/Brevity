@@ -3,8 +3,8 @@
 	<div  class="site-head" style="background-image:url(<?php echo getThemeOption('d_head_bg'); ?>) ">
 		<div class="vertical">
 			<div class="site-head-content inner">
-				<h1><?php echo get_option('blogname'); ?></h1>
-				<h3><?php echo get_option('blogdescription'); ?></h3>
+				<h3><?php echo get_option('blogname'); ?> - <?php echo get_option('blogdescription'); ?></h3>
+				<img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="<?php echo get_option('blogname'); ?> - <?php echo get_option('blogdescription'); ?>">
 			</div>
 		</div>
 	</div>
