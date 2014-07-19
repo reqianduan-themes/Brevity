@@ -176,15 +176,15 @@ function getThumbnail() {
     if ( has_post_thumbnail() ) {   
     $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size);
     $thumbnailsrc = $thumbnail[0];
-    echo '<img class="lazy pure-img" src="'.$thumbnailsrc.'" alt="'.trim(strip_tags( $post->post_title )).'" />';
+    echo '<img class="lazy pure-img" data-original="'.$thumbnailsrc.'" alt="'.trim(strip_tags( $post->post_title )).'" />';
     } else {
         $content = $post->post_content;  
         preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);  
         $n = count($strResult[1]);  
         if($n > 0){
-            echo '<img class="lazy pure-img" src="'.$strResult[1][0].'" alt="'.trim(strip_tags( $post->post_title )).'" />';  
+            echo '<img class="lazy pure-img" data-original="'.$strResult[1][0].'" alt="'.trim(strip_tags( $post->post_title )).'" />';  
         }else {
-            echo '<img class="lazy pure-img" src="'.get_bloginfo('template_url').'/img/default.jpg" alt="'.trim(strip_tags( $post->post_title )).'" />';  
+            echo '<img class="lazy pure-img" data-original="'.get_bloginfo('template_url').'/img/default.jpg" alt="'.trim(strip_tags( $post->post_title )).'" />';  
         }  
     }  
 }
