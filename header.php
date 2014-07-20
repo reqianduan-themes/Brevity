@@ -24,14 +24,14 @@ Date: 2014-07-12
 	<?php if( getThemeOption('d_headcode_b') != '' ) echo getThemeOption('d_headcode'); ?>
 </head>
 <body>
-	<div class="header">
+<!-- 	<div class="header">
 		<a href="/list" class="menu">
 			<div class="menu_ico"></div>
 		</a>
 		<a href="<?php bloginfo('url'); ?>" class="logo">
-			<div></div>
+			<img src="<?php bloginfo('template_url'); ?>/img/logo_small.png" alt="<?php echo get_option('blogname'); ?> - <?php echo get_option('blogdescription'); ?>">
 		</a>
 		<a href="/list" class="seach">
 			<div id="search"></div>
 		</a>
-	</div>
+	</div> -->
