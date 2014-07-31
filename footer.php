@@ -22,8 +22,8 @@
 			</a>
 		</div>
 		<div id="foot-info">
-			<a href="#" id="foot-logo">
-				<img src="http://sae.sina.com.cn/doc/_images/poweredby-125x35px.png" alt="<?php bloginfo('name'); ?> logo">
+			<a href="http://themes.xiguabaobao.com/" id="foot-logo">
+				<img src="http://arvin.qiniudn.com/%E7%94%A8%E5%BF%83%E5%81%9A%E4%B8%BB%E9%A2%98.png" alt="<?php bloginfo('name'); ?> logo">
 			</a>
 			<section class="copyright">&copy; 2014 <?php bloginfo('name'); ?>. All Rights Reserved.</section>
 			<p class="approve"><?php  echo (getThemeOption('d_beian') == '' ? 'Theme by <a href="http://themes.xiguabaobao.com/B1/">B1</a>' : getThemeOption('d_beian')); ?></p>
