@@ -1,6 +1,6 @@
 <?php
 
-$dname = 'B1';
+$dname = 'Brevity';
 
 
 //自定义主题设置
