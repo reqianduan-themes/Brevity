@@ -26,6 +26,16 @@ module.exports = function(grunt){
 	    		}
 	    	}
 	    },
+	    csscomb: {
+			options: {
+				config: 'css/.csscomb.json'
+			},
+			build: {
+				files: {
+					'style.css': 'style.css'
+				}
+			}
+		},
 	    cssmin: {
 	    	options: {
 	    		banner: '<%= banner %>',
@@ -33,29 +43,22 @@ module.exports = function(grunt){
 	    	},
 	    	build: {
 	    		files: {
-	    			'css/all.min.css': [
+	    			'style.css': [
 	    				'css/pure.css',
 	    				'css/base.css',
 	    				'css/screen.css',
-	    				'css/post.css'
+	    				'css/post.css',
+	    				'css/bdshare.custom.css',
+	    				'css/duoshuo.custom.css',
+	    				'css/typography.css'
 	    			]
 	    		}
 	    	}
 	    },
-	    csscomb: {
-			options: {
-				config: 'css/.csscomb.json'
-			},
-			build: {
-				files: {
-					'css/style.css': 'css/style.css'
-				}
-			}
-		},
 	    watch: {
 	    	css: {
 	    		files: ['css/*.css'],
-	    		tasks: ['csscomb','cssmin']
+	    		tasks: ['cssmin']
 	    	},
 	    	js: {
 	    		files: ['js/*.js'],

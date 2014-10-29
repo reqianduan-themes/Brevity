@@ -78,7 +78,7 @@ function() {
 		})
 
 		//开启topbar滚动隐藏效果
-		$('.header').topbar();
+		//$('.header').topbar();
 
 		//开启图片lazyload效果
 		if($("img.lazy"))

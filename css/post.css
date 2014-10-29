@@ -1,1 +1,311 @@
-.banner{text-align:center;width:100%;background:no-repeat top center fixed;background-size:100% auto}.banner_bg{width:100%;height:100%;display:table;background-image:-ms-linear-gradient(top,rgba(192,192,192,.5) 0,rgba(0,0,0,.5) 100%);background-image:-moz-linear-gradient(top,rgba(192,192,192,.5) 0,rgba(0,0,0,.5) 100%);background-image:-o-linear-gradient(top,rgba(192,192,192,.5) 0,rgba(0,0,0,.5) 100%);background-image:-webkit-gradient(linear,left top,right bottom,color-stop(0,#FFF),color-stop(1,#00A3EF));background-image:-webkit-linear-gradient(top,rgba(192,192,192,.5) 0,rgba(0,0,0,.5) 100%);background-image:linear-gradient(top,rgba(192,192,192,.5) 0,rgba(0,0,0,.5) 100%)}.banner-head{display:table-cell;vertical-align:middle;margin-bottom:0}.banner-head h1{font-size:2.4em;color:#fff;line-height:1.8em;padding:0 10px;display:inline-block}.author_info{text-align:center;margin-top:-67px}#author{margin:0 auto;text-align:center;z-index:99;clear:both;position:relative;display:inline-block}#author .pic{display:block;height:125px;width:125px;background:no-repeat center center;background-size:contain;border:4px solid #fff;-moz-border-radius:100px;-ms-border-radius:100px;-o-border-radius:100px;border-radius:100px}#author .pic:hover{cursor:pointer}#author a{text-decoration:none}#author h4{color:#c5c5c5;font-size:14px}#author time{font-size:12px;color:#ccc}#content{margin:0 auto;padding:70px 0 100px;width:80%;max-width:700px;color:#333;word-wrap:break-word;word-break:normal}#content .post{margin:0;clear:both;font-family:Microsoft YaHei, "微软雅黑", Lucida, Verdana, Hiragino Sans GB, STHeiti, WenQuanYi Micro Hei, Droid Sans Fallback, SimSun, sans-serif}#content .post p{line-height:2em}#content .post img{max-width:100%;max-height:233px;margin:0 auto}#content .post hr{width:14%;}#more-post{background:#f0f0f0}#more-post .title{margin:0 auto;padding:41px 0 35px;width:300px;text-align:center;border-bottom:1px solid #bbb}#more-post .title h2,#more-post .title h3{color:#6b6b6b}#more-post .title h2{font-size:18px}#more-post .title h3{font-size:12px}.posts{width:726px;margin:0 auto;padding-bottom:100px}.posts .reco{margin-top:45px;text-align:center}.posts .l-box{text-align:center;background:#fff;margin:0 10px;width:220px;display:inline-block;vertical-align:top}.posts .l-box .post-bg{background:no-repeat center center;background-size:cover;height:220px}.post-author-img{height:50px;width:50px;background:no-repeat center center;background-size:100% 100%;border:2px solid #fff;-moz-border-radius:100px;-ms-border-radius:100px;-o-border-radius:100px;border-radius:100px;z-index:2;margin:-25px auto 0}.posts a{color:#000;text-decoration:none}.posts h2{margin-bottom:5px;font-size:14px}.posts h4{color:#6b6b6b;text-decoration:none;margin-top:0;font-size:13px}#share-span{float:left;line-height:36px;color:#bcbcbc}.full-img{width:auto;width:calc(100% + 32px);margin:0 -16px;min-width:0;max-width:112%}#content .post-meta{padding-top:30px}.post-meta time{line-height:36px}.post-meta a{color:#999;font-size:13px}.post-meta a:hover{text-decoration:underline}#content .post-comment{padding-left:1em;padding-right:1em;}@media screen and (max-width:768px){#posts{width:100%}.posts .l-box{display:block;margin:0 auto;clear:both}}@media screen and (max-width:48em){.banner,.banner_bg{height:230px}.banner-head h1{font-size:1.2em}.author_info{margin-top:-25px}#author .pic{width:50px;height:50px;margin:0 auto;border:2px solid #fff}#author h3{margin:0}#content{padding-top:30px}}
+.banner
+{
+    width: 100%;
+
+    text-align: center;
+
+    background: no-repeat top center fixed;
+    background-size: 100% auto;
+}
+.banner_bg
+{
+    display: table;
+
+    width: 100%;
+    height: 100%;
+
+    background-image:     -ms-linear-gradient(top,rgba(192,192,192,.5) 0,rgba(0,0,0,.5) 100%);
+    background-image:    -moz-linear-gradient(top,rgba(192,192,192,.5) 0,rgba(0,0,0,.5) 100%);
+    background-image:      -o-linear-gradient(top,rgba(192,192,192,.5) 0,rgba(0,0,0,.5) 100%);
+    background-image: -webkit-gradient(linear,left top,right bottom,color-stop(0,#fff),color-stop(1,#00a3ef));
+    background-image: -webkit-linear-gradient(top,rgba(192,192,192,.5) 0,rgba(0,0,0,.5) 100%);
+    background-image:         linear-gradient(top,rgba(192,192,192,.5) 0,rgba(0,0,0,.5) 100%);
+}
+.banner-head
+{
+    display: table-cell;
+
+    margin-bottom: 0;
+
+    vertical-align: middle;
+}
+.banner-head h1
+{
+    font-size: 2.4em;
+    line-height: 1.8em;
+
+    display: inline-block;
+
+    padding: 0 10px;
+
+    color: #fff;
+}
+.author_info
+{
+    margin-top: -67px;
+
+    text-align: center;
+}
+#author
+{
+    position: relative;
+    z-index: 99;
+
+    display: inline-block;
+    clear: both;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+#author .pic
+{
+    display: block;
+
+    width: 125px;
+    height: 125px;
+    margin: 0 auto;
+
+    border: 4px solid #fff;
+    -moz-border-radius: 100px;
+         border-radius: 100px;
+    background: no-repeat center center;
+    background-size: contain;
+
+     -ms-border-radius: 100px;
+      -o-border-radius: 100px;
+}
+#author .pic:hover
+{
+    cursor: pointer;
+}
+#author a
+{
+    text-decoration: none;
+}
+#author h4
+{
+    font-size: 14px;
+
+    color: #c5c5c5;
+}
+#author time
+{
+    font-size: 12px;
+
+    color: #ccc;
+}
+#content
+{
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 70px 0 100px;
+
+    word-wrap: break-word;
+    word-break: normal;
+
+    color: #333;
+}
+#content .post
+{
+    font-family: Microsoft YaHei, '微软雅黑', Lucida, Verdana, Hiragino Sans GB, STHeiti, WenQuanYi Micro Hei, Droid Sans Fallback, SimSun, sans-serif;
+
+    clear: both;
+
+    margin: 0;
+}
+#content .post p
+{
+    line-height: 2em;
+}
+#content .post img
+{
+    max-width: 100%;
+    /*max-height: 233px;*/
+    margin: 0 auto;
+}
+#content .post hr
+{
+    width: 14%;
+}
+#more-post
+{
+    background: #f0f0f0;
+}
+#more-post .title
+{
+    width: 300px;
+    margin: 0 auto;
+    padding: 41px 0 35px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #bbb;
+}
+#more-post .title h2,#more-post .title h3
+{
+    color: #6b6b6b;
+}
+#more-post .title h2
+{
+    font-size: 18px;
+}
+#more-post .title h3
+{
+    font-size: 12px;
+}
+.posts
+{
+    width: 726px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+.posts .reco
+{
+    margin-top: 45px;
+
+    text-align: center;
+}
+.posts .l-box
+{
+    display: inline-block;
+
+    width: 220px;
+    margin: 0 10px;
+
+    text-align: center;
+    vertical-align: top;
+
+    background: #fff;
+}
+.posts .l-box .post-bg
+{
+    height: 220px;
+
+    background: no-repeat center center;
+    background-size: cover;
+}
+.post-author-img
+{
+    z-index: 2;
+
+    width: 50px;
+    height: 50px;
+    margin: -25px auto 0;
+
+    border: 2px solid #fff;
+    -moz-border-radius: 100px;
+         border-radius: 100px;
+    background: no-repeat center center;
+    background-size: 100% 100%;
+
+     -ms-border-radius: 100px;
+      -o-border-radius: 100px;
+}
+.posts a
+{
+    text-decoration: none;
+
+    color: #000;
+}
+.posts h2
+{
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+.posts h4
+{
+    font-size: 13px;
+
+    margin-top: 0;
+
+    text-decoration: none;
+
+    color: #6b6b6b;
+}
+#share-span
+{
+    line-height: 36px;
+
+    float: left;
+
+    color: #bcbcbc;
+}
+.full-img
+{
+    width: auto;
+    width: calc(100% + 32px);
+    min-width: 0;
+    max-width: 112%;
+    margin: 0 -16px;
+}
+#content .post-meta
+{
+    padding-top: 30px;
+}
+.post-meta time
+{
+    line-height: 36px;
+}
+.post-meta a
+{
+    font-size: 13px;
+
+    color: #999;
+}
+.post-meta a:hover
+{
+    text-decoration: underline;
+}
+#content .post-comment
+{
+    padding-right: 1em;
+    padding-left: 1em;
+}
+@media screen and (max-width:768px)
+{
+    #posts
+    {
+        width: 100%;
+    }
+    .posts .l-box
+    {
+        display: block;
+        clear: both;
+
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:48em)
+{
+    .banner,.banner_bg
+    {
+        height: 230px;
+    }
+    .banner-head h1
+    {
+        font-size: 1.2em;
+    }
+    .author_info
+    {
+        margin-top: -25px;
+    }
+    #author .pic
+    {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+
+        border: 2px solid #fff;
+    }
+    #author h3
+    {
+        margin: 0;
+    }
+    #content
+    {
+        padding-top: 30px;
+    }
+}

@@ -30,10 +30,7 @@
 		</div>
 	</div>
 
-	<script src="<?php bloginfo('template_url'); ?>/js/jquery.min.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/jquery.lazyload.min.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/jquery.topbar.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/js/script.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/all.min.js"></script>
 	<script type="text/javascript">
 		var duoshuoQuery = {short_name:"<?php echo getThemeOption('d_duoshuo'); ?>"};
 		(function() {
