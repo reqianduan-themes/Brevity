@@ -17,11 +17,19 @@
 	<meta name="keywords" content="<?php if (is_home ()) echo getThemeOption('d_keywords'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="generator" content="西瓜宝宝主题v1.0">
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?20141029">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?20150211">
 
 	<?php if( getThemeOption('d_headcode_b') != '' ) echo getThemeOption('d_headcode'); ?>
 </head>
 <body>
+	<div class="subscribe-me">
+		<h2>新站上线</h2>
+		<a href="#close" class="sb-close-btn">x</a>
+		<p>www.reqianduan.com</p>
+		<p>前端开发工程师、前端爱好者学习交流平台</p>
+		<a href="http://www.reqianduan.com/" class="btn">前往围观</a>
+	</div>
+	
 	<!-- <div class="header">
 		<a href="<?php bloginfo('url'); ?>" class="menu">
 			<div class="menu_ico"></div>

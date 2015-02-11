@@ -83,5 +83,15 @@ function() {
 		//开启图片lazyload效果
 		if($("img.lazy"))
             $("img.lazy").lazyload({effect : "fadeIn"});
+
+        //开启通知弹框
+		$(".subscribe-me").subscribeBetter({
+			trigger: "onload", // atendpage | onload | onidle
+			animation: "flyInUp", // fade | flyInRight | flyInLeft | flyInUp | flyInDown
+			delay: 0,
+			showOnce: false,
+			autoClose: false,
+			scrollableModal: false
+		});
 	})
 }($);

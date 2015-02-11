@@ -21,6 +21,7 @@ module.exports = function(grunt){
 	    				'js/jquery.min.js',
 	    				'js/jquery.lazyload.min.js',
 	    				'js/jquery.topbar.js',
+	    				'js/jquery.subscribe-better.js',
 	    				'js/script.js'
 	    			]
 	    		}
@@ -50,6 +51,7 @@ module.exports = function(grunt){
 	    				'css/post.css',
 	    				'css/bdshare.custom.css',
 	    				'css/duoshuo.custom.css',
+	    				'css/subscribe-better.css',
 	    				'css/typography.css'
 	    			]
 	    		}
